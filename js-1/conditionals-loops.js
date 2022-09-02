@@ -1,3 +1,4 @@
+// const prompt = require('prompt-sync')();
 // larger of two integers
 let fst_int = prompt("Please enter an integer: ");
 let sec_int = prompt("Please enter an integer: ");
