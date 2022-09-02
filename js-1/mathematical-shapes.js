@@ -21,10 +21,9 @@ console.log(area);
 
 // finding circumference & area
 const radius = 4;
-const pi = 3.14;
 
-var circumference = 2 * pi * radius;
+var circumference = 2 * Math.PI * radius;
 console.log(circumference);
 
-var surface_area = pi * (radius ** 2);
+var surface_area = Math.PI * (radius ** 2);
 console.log(surface_area);
