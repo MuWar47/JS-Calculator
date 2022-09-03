@@ -1,2 +1,2 @@
 # FD-Training
- training repo
+ Training Assignments Repository
