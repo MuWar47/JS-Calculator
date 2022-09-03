@@ -1,4 +1,5 @@
-// const prompt = require('prompt-sync')();    //delete later
+var playerScore = 0;
+var computerScore = 0;
 
 function computerPlay() {
     const option = ["rock", "paper", "scissors"];
@@ -14,12 +15,60 @@ function userPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        var str = "It's a draw!"
+        var str = "Computer also played " + computerSelection + "\n" + "It's a draw!" + "\n";
+        return str
+    }
+    else if (playerSelection == "rock" && computerSelection == "paper") {
+        var str = "Computer played " + computerSelection + "\n" + "You lose! Paper beats Rock!" + "\n";
+        computerScore++ ;
+        return str
+    }
+    else if (playerSelection == "rock" && computerSelection == "scissors") {
+        var str = "Computer played " + computerSelection + "\n" + "You win! Rock beats Scissors!" + "\n";
+        playerScore++ ;
+        return str
+    }
+    else if (playerSelection == "paper" && computerSelection == "rock") {
+        var str = "Computer played " + computerSelection + "\n" + "You win! Paper beats rock!" + "\n";
+        playerScore++ ;
+        return str
+    }
+    else if (playerSelection == "paper" && computerSelection == "scissors") {
+        var str = "Computer played " + computerSelection + "\n" + "You lose! Scissors beats Paper!" + "\n";
+        computerScore++ ;
+        return str
+    }
+    else if (playerSelection == "scissors" && computerSelection == "rock") {
+        var str = "Computer played " + computerSelection + "\n" + "You lose! Rock beats scissors!" + "\n";
+        computerScore++ ;
+        return str
+    }
+    else if (playerSelection == "scissors" && computerSelection == "paper") {
+        var str = "Computer played " + computerSelection + "\n" + "You win! Scissors beats Paper!" + "\n";
+        playerScore++ ;
+        return str
+    }
+
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        var computerSelection = computerPlay();
+        var playerSelection = userPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+    if (playerScore > computerScore) {
+        let str = "Your Score: " + playerScore + "\n" + "Computer Score: " + computerScore + "\n" + "YOU WIN!!";
+        return str
+    }
+    else if (playerScore == computerScore) {
+        let str = "Your Score: " + playerScore + "\n" + "Computer Score: " + computerScore + "\n" + "It's a Draw!";
+        return str
+    }
+    else {
+        let str = "Your Score: " + playerScore + "\n" + "Computer Score: " + computerScore + "\n" + "You Lose!!!";
         return str
     }
 }
 
-var computerSelection = computerPlay();
-var playerSelection = userPlay();
-console.log(playRound(playerSelection, computerSelection));
-
+console.log(game());
