@@ -3,19 +3,24 @@ let fst_int = prompt("Please enter an integer: ");
 let sec_int = prompt("Please enter an integer: ");
 
 if (fst_int > sec_int) {
-  console.log(fst_int);
+  var str = "Larger is " + fst_int;
+  console.log(str);
 }
 else {
-  console.log(sec_int);
+  var str2 = "Larger is " + sec_int;
+  console.log(str2);
 }
 
 // check for even odd
-while (true){
+let i = 0;
+while (i < 5){
     let integer = prompt("Enter an integer: ");
     if (integer % 2 == 0) {
-      console.log("Even");
+      console.log("Number is Even");
     }
     else {
-      console.log("Odd");
-    } }
+      console.log("Number is Odd");
+    }
+    i++ ;
+   }
     
