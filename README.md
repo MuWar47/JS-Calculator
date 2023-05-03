@@ -1,2 +1,2 @@
-# FD-Training
- Training Assignments Repository
+JavaScript Calculator
+
